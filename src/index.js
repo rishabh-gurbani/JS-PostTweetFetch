@@ -42,7 +42,7 @@ const tweetComponent = (tweet) => {
         ? Math.floor((Date.now() - tweet.timestamp)/60000) : tweet.timestamp;
     return `
         <article class="flex text-neutral-50 border-b border-neutral-700 w-full px-4 py-2 bg-black round">
-            <img src="../public/images/user-avatars/user-avatar-2.png" class="w-12 h-12 mt-1 rounded-full">
+            <img src="/images/user-avatars/user-avatar-2.png" class="w-12 h-12 mt-1 rounded-full">
             <div class="ml-4 w-full">
                 <div class="flex p-0">
                     <div class="mr-2 font-semibold">${tweet.username || "name"}</div>
@@ -58,31 +58,31 @@ const tweetComponent = (tweet) => {
                 <div class="flex w-full justify-between my-4">
                     <div class="flex items-center gap-1">
                         <button>
-                            <img src="../public/images/tweet-actions/comment.svg"  class="w-3.5 h-auto">
+                            <img src="/images/tweet-actions/comment.svg"  class="w-3.5 h-auto">
                         </button>
                         <div class="text-sm text-neutral-500">${tweet.comments}</div>
                     </div>
                     <div class="flex items-center gap-1">
                         <button>
-                            <img src="../public/images/tweet-actions/rt.svg" class="w-4 h-auto">
+                            <img src="/images/tweet-actions/rt.svg" class="w-4 h-auto">
                         </button>
                         <div class="text-sm text-neutral-500">${tweet.retweets}</div>
                     </div>
                     <div class="flex items-center gap-1">
                         <button>
-                            <img src="../public/images/tweet-actions/heart.svg" class="w-3.5 h-auto">
+                            <img src="/images/tweet-actions/heart.svg" class="w-3.5 h-auto">
                         </button>
                         <div class="text-sm text-neutral-500">${tweet.likes}</div>
                     </div>
                     <div class="flex items-start gap-1">
                         <button>
-                            <img src="../public/images/tweet-actions/stats.svg" class="w-3.5 h-auto">
+                            <img src="/images/tweet-actions/stats.svg" class="w-3.5 h-auto">
                         </button>
                         <div class="mt-0.5 text-sm self-end text-neutral-500">${tweet.stats}</div>
                     </div>
                     <div class="flex items-center">
                         <button>
-                            <img src="../public/images/tweet-actions/share.svg" class="w-3.5 h-auto">
+                            <img src="/images/tweet-actions/share.svg" class="w-3.5 h-auto">
                         </button>
                     </div>
                 </div>
