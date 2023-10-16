@@ -5,14 +5,9 @@ const path = require('path');
 
 app.use(express.json());
 
-// Serve static files from the "public" directory for images
 app.use(express.static(path.join(__dirname, '')));
 
-// Serve static files from the "src" directory for HTML and CSS
 app.use(express.static(path.join(__dirname, 'src')));
-
-// Serve static files from the "dist" directory for your Tailwind CSS output
-app.use('/dist', express.static(path.join(__dirname, 'dist')));
 
 // only for demo purposes.
 // ideally stored in a db
