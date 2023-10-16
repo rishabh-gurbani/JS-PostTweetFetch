@@ -22,3 +22,7 @@ Advanced JS - Assignment 1 - Post Tweet Using Fetch
 4. Rate limiting (can tweet only after certain interval)
 5. Duplicate Tweet
 6. Tweet too long or Empty Tweet
+
+Server: server.js
+Handling Responses on Frontend: src/post-tweet.js
+Rest is UI Rendering
