@@ -27,6 +27,10 @@ export const postTweet = async (tweet) => {
 
         if(response.ok){
             console.log(data);
+            const { content, timestamp, likes, comments, retweets, stats } = data;
+            return {
+                content, timestamp , likes, comments, retweets, stats
+            }
         } else {
             console.log(response.status);
             console.log(data.message);

@@ -18,8 +18,15 @@ textArea.addEventListener('input', function () {
 });
 
 postButton.addEventListener('click',  async () => {
-    await postTweet(textArea.value);
+    const postObject = await postTweet(textArea.value);
     textArea.value = '';
     characterCount.textContent = `0`;
     postButton.disabled = true;
+
+    if(postObject){
+        const tweets = JSON.parse(sessionStorage.getItem('tweets'));
+        tweets.unshift(postObject);
+        sessionStorage.setItem('tweets', JSON.stringify(tweets));
+    }
+
 });

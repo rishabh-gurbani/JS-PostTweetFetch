@@ -16,6 +16,7 @@ const users = [
     {
         id: 789123,
         username: 'Rishabh',
+        userHandle: 'rishabh-gurbani',
         authToken: '12yoda328yoda',
         canPost: true,
         tweets: [
@@ -32,6 +33,7 @@ const users = [
     {
         id: 843427,
         username: 'Rock',
+        userHandle: 'rock',
         authToken: '12d23edda',
         canPost: false,
         tweets: [
@@ -116,12 +118,16 @@ app.post('/api/createTweet', authenticateUser, (req, res) => {
     }
 
     const newTweet = {
-            tweet_id: Math.floor(Math.random()*100),
-            content: tweetContent,
-            media: [],
-            timestamp: Date.now(),
-            likes: 0,
-            retweets: 0,
+        username: user.username,
+        userHandle: user.userHandle,
+        tweet_id: Math.floor(Math.random()*100),
+        content: tweetContent,
+        media: [],
+        timestamp: Date.now(),
+        likes: 0,
+        comments: 0,
+        retweets: 0,
+        stats: 0,
     }
 
     user.tweets.push(newTweet);
